@@ -1,0 +1,1 @@
+funcion id pabierto id tflotante coma id tflotante pcerrado tflotante llaveabi devolver id suma id fsentencia llavecerr funcion principal pabierto pcerrado tentero llaveabi id tflotante igual nflotante fsentencia id tflotante igual nflotante fsentencia imprimir pabierto id pabierto id coma id pcerrado pcerrado fsentencia devolver nentero fsentencia llavecerr
