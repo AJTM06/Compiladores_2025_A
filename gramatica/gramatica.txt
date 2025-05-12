@@ -1,0 +1,100 @@
+programaprincipal -> funcion opcionprincipal masfuncn
+
+opcionprincipal -> restomain
+opcionprincipal -> restofuncn
+
+masfuncn -> programaprincipal
+masfuncn -> ''
+
+restomain -> principal pabierto pcerrado tentero llaveabi masinstrucciones llavecerr
+restofuncn -> id pabierto parametrosf pcerrado opciondato llaveabi masinstrucciones llavecerr
+
+parametrosf -> id tipodato masparametrosf
+parametrosf -> ''
+
+masparametrosf -> coma parametrosf
+masparametrosf -> ''
+
+opciondato -> tvacio
+opciondato -> tipodato
+
+instruccion -> asignaciones fsentencia
+instruccion -> mostrar fsentencia
+instruccion -> buclepara
+instruccion -> buclemientras
+instruccion -> condicional
+instruccion -> detener fsentencia
+instruccion -> leer pabierto id pcerrado fsentencia
+instruccion -> devolver expresion fsentencia
+
+masinstrucciones -> instruccion masinstrucciones
+masinstrucciones -> ''
+
+buclepara -> para pabierto asignaciones fsentencia expresion fsentencia asignaciones pcerrado llaveabi masinstrucciones llavecerr
+
+buclemientras -> mientras pabierto expresion pcerrado llaveabi masinstrucciones llavecerr
+
+condicional -> si pabierto expresion pcerrado llaveabi masinstrucciones llavecerr posibilidad
+
+posibilidad -> sino pabierto expresion pcerrado llaveabi masinstrucciones llavecerr posibilidad
+posibilidad -> entonces llaveabi masinstrucciones llavecerr
+posibilidad -> ''
+
+mostrar -> imprimir pabierto comandos pcerrado
+
+comandos -> expresion mascomandos
+comandos -> ''
+
+macomandos -> suma expresion mascomandos
+mascomandos -> ''
+
+asignaciones -> id ext
+
+ext -> tipodato opcionesasig
+ext -> extension
+
+extension -> igual expresion
+extension -> pabierto parametros pcerrado
+
+opcionesasig -> igual expresion
+opcionesasig -> ''
+
+expresion -> pabierto expresion pcerrado masexpresiones
+expresion -> id opciones masexpresiones
+expresion -> valordato masexpresiones
+
+masexpresiones -> ''
+masexpresiones -> operacion expresion
+
+opciones -> pabierto parametros pcerrado
+opciones -> ''
+
+parametros -> expresion restoparametros
+parametros -> ''
+
+restoparametros -> coma expresion restoparametros
+restoparametros -> '' 
+
+operacion -> suma
+operacion -> resta
+operacion -> mul
+operacion -> div
+operacion -> residuo
+operacion -> igualbool
+operacion -> menorque
+operacion -> mayorque
+operacion -> menorigualque
+operacion -> mayorigualque
+operacion -> diferentede
+operacion -> y
+operacion -> o
+ 
+valordato -> ncadena
+valordato -> nflotante
+valordato -> nentero
+valordato -> nbooleano
+
+tipodato -> tentero
+tipodato -> tcadena
+tipodato -> tflotante
+tipodato -> tbooleano
