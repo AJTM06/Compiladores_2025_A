@@ -1,0 +1,9 @@
+fn sumanumeros (n1 float,n2 float) float {
+    return n1+n2;
+}
+fn main () int {
+    n1 float=126.2;
+    n2 float=267.4;
+	show(sumanumeros(n1,n2));
+    return 0;
+}

@@ -1,0 +1,3 @@
+fn main () int {
+    x = f(x, g, g(1), 10);
+}

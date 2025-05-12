@@ -1,0 +1,12 @@
+fn fibonacci_recursivo (n int) int {
+	if (n <= 1) { 
+        return n; 
+    }
+	return fibonacci_recursivo(n - 1) + fibonacci_recursivo(n - 2);
+}
+
+fn main () int {
+	numero int = 5;
+	show("La secuencia finbonacci en " + numero + " es: " + fibonacci_recursivo(numero));
+	return 0;
+}

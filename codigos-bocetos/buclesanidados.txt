@@ -1,0 +1,32 @@
+fn generar_patron(n int) void {
+    i int = 1;
+    while (i <= n) {
+        j int = 1;
+        while (j <= i) {
+            if (j % 2 == 0) {
+                show("* ");  # Si j es par, muestra un asterisco
+            } elif (j % 3 == 0) {
+                show("# ");  # Si j es múltiplo de 3, muestra un numeral
+            } else {
+                show(j + " "); # De lo contrario, muestra el número
+            }
+            j = j + 1;
+        }
+        show("\n");
+        i = i + 1;
+    }
+}
+
+fn main() int {
+    num int;
+    show("Ingrese un número para generar el patrón:");
+    read(num);
+    
+    if (num <= 0) {
+        show("El número debe ser mayor que 0.");
+    } else {
+        generar_patron(num);
+    }
+    
+    return 0;
+}
