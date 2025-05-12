@@ -189,11 +189,11 @@ def generar_tokens():
 lista_de_tokens = generar_tokens()
 
 # Imprimir la lista de tokens obtenida.
-#imprimir_tokens(lista_de_tokens)
+imprimir_tokens(lista_de_tokens)
 
 # Mostrar el resultado del análisis léxico.
-#mostrar_resultado_lexico(lista_errores_lexicos)
+mostrar_resultado_lexico(lista_errores_lexicos)
 
 # Escribir los tokens para probar en un .txt.
-#salida_nombre_tokens = f"{os.path.splitext(archivo)[0]}-tokens"
-#escribir_tokens_en_txt(lista_de_tokens, salida_nombre_tokens)
+salida_nombre_tokens = f"{os.path.splitext(archivo)[0]}-tokens"
+escribir_tokens_en_txt(lista_de_tokens, salida_nombre_tokens)

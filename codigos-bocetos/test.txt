@@ -1,0 +1,6 @@
+fn main () int {
+    if (var != loc()) {
+        show("hola");
+        return 0;
+    }
+}
