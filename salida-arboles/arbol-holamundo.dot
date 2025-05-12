@@ -1,0 +1,77 @@
+digraph {
+	1 [label=programaprincipal fillcolor=white style=filled]
+	1 -> 2
+	2 [label=funcion fillcolor=lightgrey peripheries=2 style=filled]
+	1 -> 3
+	3 [label=opcionprincipal fillcolor=white style=filled]
+	3 -> 5
+	5 [label=restomain fillcolor=white style=filled]
+	5 -> 6
+	6 [label=principal fillcolor=lightgrey peripheries=2 style=filled]
+	5 -> 7
+	7 [label=pabierto fillcolor=lightgrey peripheries=2 style=filled]
+	5 -> 8
+	8 [label=pcerrado fillcolor=lightgrey peripheries=2 style=filled]
+	5 -> 9
+	9 [label=tentero fillcolor=lightgrey peripheries=2 style=filled]
+	5 -> 10
+	10 [label=llaveabi fillcolor=lightgrey peripheries=2 style=filled]
+	5 -> 11
+	11 [label=masinstrucciones fillcolor=white style=filled]
+	11 -> 13
+	13 [label=instruccion fillcolor=white style=filled]
+	13 -> 15
+	15 [label=mostrar fillcolor=white style=filled]
+	15 -> 17
+	17 [label=imprimir fillcolor=lightgrey peripheries=2 style=filled]
+	15 -> 18
+	18 [label=pabierto fillcolor=lightgrey peripheries=2 style=filled]
+	15 -> 19
+	19 [label=comandos fillcolor=white style=filled]
+	19 -> 21
+	21 [label=expresion fillcolor=white style=filled]
+	21 -> 23
+	23 [label=valordato fillcolor=white style=filled]
+	23 -> 25
+	25 [label=ncadena fillcolor=lightgrey peripheries=2 style=filled]
+	21 -> 24
+	24 [label=masexpresiones fillcolor=white style=filled]
+	24 -> 26
+	26 [label=e fillcolor=lightgrey peripheries=2 style=filled]
+	19 -> 22
+	22 [label=mascomandos fillcolor=white style=filled]
+	22 -> 27
+	27 [label=e fillcolor=lightgrey peripheries=2 style=filled]
+	15 -> 20
+	20 [label=pcerrado fillcolor=lightgrey peripheries=2 style=filled]
+	13 -> 16
+	16 [label=fsentencia fillcolor=lightgrey peripheries=2 style=filled]
+	11 -> 14
+	14 [label=masinstrucciones fillcolor=white style=filled]
+	14 -> 28
+	28 [label=instruccion fillcolor=white style=filled]
+	28 -> 30
+	30 [label=devolver fillcolor=lightgrey peripheries=2 style=filled]
+	28 -> 31
+	31 [label=expresion fillcolor=white style=filled]
+	31 -> 33
+	33 [label=valordato fillcolor=white style=filled]
+	33 -> 35
+	35 [label=nentero fillcolor=lightgrey peripheries=2 style=filled]
+	31 -> 34
+	34 [label=masexpresiones fillcolor=white style=filled]
+	34 -> 36
+	36 [label=e fillcolor=lightgrey peripheries=2 style=filled]
+	28 -> 32
+	32 [label=fsentencia fillcolor=lightgrey peripheries=2 style=filled]
+	14 -> 29
+	29 [label=masinstrucciones fillcolor=white style=filled]
+	29 -> 37
+	37 [label=e fillcolor=lightgrey peripheries=2 style=filled]
+	5 -> 12
+	12 [label=llavecerr fillcolor=lightgrey peripheries=2 style=filled]
+	1 -> 4
+	4 [label=masfuncn fillcolor=white style=filled]
+	4 -> 38
+	38 [label=e fillcolor=lightgrey peripheries=2 style=filled]
+}
