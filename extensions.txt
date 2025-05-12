@@ -1,0 +1,4 @@
+code --install-extension ms-python.python
+code --install-extension usernamehw.errorlens
+code --install-extension tintinweb.graphviz-interactive-preview
+code --install-extension janisdd.vscode-edit-csv
