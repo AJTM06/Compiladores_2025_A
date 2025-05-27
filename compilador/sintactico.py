@@ -272,7 +272,7 @@ def procesar_funcion(nodo_func, ambito):
     ambito_func = ambito.entrar_ambito()
     # Registrar los parámetros en el ámbito de la función
     for param in parámetros:
-        ambito_func.agregar_simbolo(param['nombre'], tipo=param['tipo'], categoria='parameter')
+        ambito_func.agregar_simbolo(param['nombre'], tipo=param['tipo'], categoria='parametro')
     # Procesar las instrucciones dentro de la función para encontrar variables
     nodo_masinstrucciones = buscar_hijo(nodo_func, 'masinstrucciones')
     if nodo_masinstrucciones:
