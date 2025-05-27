@@ -1,0 +1,7 @@
+Símbolo,Categoría,Tipo,Ámbito,Parámetros,Retorno
+restanumeros,función,-,Global,"n1: tflotante, n2: tflotante",tflotante
+main,función,-,Global,-,tentero
+n1,parameter,tflotante,restanumeros,-,-
+n2,parameter,tflotante,restanumeros,-,-
+n1,variable,tflotante,main,-,-
+n2,variable,tflotante,main,-,-

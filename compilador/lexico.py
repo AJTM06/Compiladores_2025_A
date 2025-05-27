@@ -6,7 +6,7 @@ from tabulate import tabulate
 
 # Ingresar datos del boceto de código.
 directorio = os.path.dirname(__file__)
-archivo = 'buclesanidados.txt' # Ingresar el nombre del boceto.
+archivo = 'fibonaccirecursivo.txt' # Ingresar el nombre del boceto.
 ruta_archivo = os.path.join(directorio, '..', 'codigos-bocetos', archivo)
 
 # Clase Token para realizar la tokenización usando ply.
