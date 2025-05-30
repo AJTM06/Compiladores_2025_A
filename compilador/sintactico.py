@@ -32,7 +32,10 @@ class TablaSimbolos:
     def agregar_simbolo(self, nombre, tipo=None, categoria=None, parámetros=None, retorno=None):
         """Añade un símbolo al ámbito actual."""
         if nombre in self.simbolos:
-            print(f"Advertencia: Símbolo {nombre} ya definido en este ámbito, se sobrescribirá")
+            #print(f"Advertencia: Símbolo {nombre} ya definido en este ámbito, se sobrescribirá")
+            errores_semanticos.append(f"❌ Error semántico: La variable '{nombre}' ya fue declarada.")
+            #se usa return para ignorar la nueva declaracion
+            return
         self.simbolos[nombre] = {
             'tipo': tipo,
             'categoria': categoria,
@@ -110,6 +113,23 @@ def arbolSintactico(raiz, contorno_hojas=False, opcion="tipo"):
             generar_nodos(hijo)
     generar_nodos(raiz)
     return graph
+
+#Lista de errores semanticos
+errores_semanticos = []
+
+#Verificar que las variables esten declaradas 
+def verificar_variable(nodo, ambito_actual):
+    if nodo.tipo == 'restofuncn' or nodo.tipo == 'restomain':
+        ambito_actual = ambito_actual.hijos.pop(0)
+
+    if nodo.tipo == 'id' and nodo.valor:
+        simbolo = ambito_actual.buscar_simbolo(nodo.valor)
+        if not simbolo:
+            mensaje = f"❌ Error semántico: La variable '{nodo.valor}' no está declarada en la línea {nodo.linea}, columna {nodo.columna}"
+            errores_semanticos.append(mensaje)
+    for hijo in nodo.hijos:
+        verificar_variable(hijo, ambito_actual)
+
 
 # Función para generar el Digraph de la tabla de símbolos.
 def generar_diagrama_tabla_simbolos(tabla_simbolos, graph=None, id_padre=None):
@@ -413,6 +433,14 @@ if respuesta:
     # Generar la tabla de símbolos en formato CSV
     generar_tabla_simbolos_csv(tabla_simbolos, nombre_arbol, output_folder)
     
+    verificar_variable(arbol_sintactico, tabla_simbolos)
+    if errores_semanticos:
+        print("\n🚨 Errores semánticos encontrados:")
+        for err in errores_semanticos:
+            print(err)
+    else:
+        print("\n✅ Verificación semántica exitosa: todas las variables están declaradas.")
+
     # Generar el árbol de ámbitos de la tabla de símbolos
     grafo_tabla_simbolos = generar_diagrama_tabla_simbolos(tabla_simbolos)
     ruta_tabla_simbolos = os.path.join(output_folder, f"{nombre_arbol}-symbol-table.dot")

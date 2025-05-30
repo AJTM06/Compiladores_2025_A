@@ -1,5 +1,5 @@
 Símbolo,Categoría,Tipo,Ámbito,Parámetros,Retorno
 fibonacci_recursivo,función,-,Global,n: tentero,tentero
 main,función,-,Global,-,tentero
-n,parameter,tentero,fibonacci_recursivo,-,-
+n,parametro,tentero,fibonacci_recursivo,-,-
 numero,variable,tentero,main,-,-

@@ -1,0 +1,6 @@
+fn main () int {
+    z int = 7;
+    z int = 4;
+    x int = y + z;
+    return 0;
+}
